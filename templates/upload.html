@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Upload</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1 class="head">Check Your Category</h1>
+    <div class="container">
+        <div class="left">
+            <form class="form" action="{{ url_for('process_upload') }}" method="POST" enctype="multipart/form-data">
+                <input class="inp" type="file" name="pdf_file" accept=".pdf" required>
+                <input class="UploadBtn" type="submit" value="Upload">
+                {% if upload_error %}
+                <p class="error-message">{{ upload_error }}</p>
+                {% endif %}
+            </form>
+        </div>
+        <div class="right">
+            {% if predicted_categories %}
+            <div class="result">
+                <h2>Predicted Categories:</h2>
+                <ul>
+                    {% for category in predicted_categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+</body>
+</html>

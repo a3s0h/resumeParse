@@ -1,0 +1,68 @@
+body{
+    background-image:linear-gradient(to left,rgba(255, 255, 255, 0.575),rgba(0, 0, 0, 0.486)),url(bgp.jpg);
+    background-position: center;
+    background-size: cover;
+    height:100vh;
+    width: 100vw;
+    overflow:hidden;
+    color: white;
+}
+.container{
+    display:flex;
+
+    gap: 30px;
+}
+.left{
+    width: 50%;
+}
+.right{
+    padding: 30px 10px;
+}
+.head{
+    text-shadow: 2px 2px 5px white;
+    color:black;
+
+}
+.form{
+    background-color:rgba(0, 0, 0, 0.331);
+    max-height:400px;
+    height: 400px;
+    width: 70%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: -4px 10px 2px rgba(255, 0, 0, 0.527);
+}
+
+.head{
+    text-align:center;
+    font-size:4rem;
+}
+.inp{
+    border: 1px dashed white;
+    padding: 90px 2px;
+    border-radius: 10px;
+}
+.UploadBtn{
+    padding: 20px 10px ;
+    border:none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+.UploadBtn:hover {
+    border-bottom:4px solid rgb(255, 0, 0);
+    /* box-shadow: 3px 3px 4px white; */
+    transform:scale3d(1.05,1.05,1.05);
+    color: black;
+}
+.result{
+    font-size: 20px;
+    color: black;
+
+}
